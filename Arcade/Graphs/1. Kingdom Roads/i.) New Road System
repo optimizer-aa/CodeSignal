@@ -1,4 +1,4 @@
-Once upon a time, in a kingdom far, far away, there lived a King Byteasar I. 
+/* Once upon a time, in a kingdom far, far away, there lived a King Byteasar I. 
 As a kind and wise ruler, he did everything in his (unlimited) power to make life for his subjects comfortable and pleasant. 
 One cold evening a messenger arrived at the king's castle with the latest news: 
 all kings in the Kingdoms Union had started enforcing traffic laws! 
@@ -30,5 +30,17 @@ roadRegister[0].length = roadRegister.length,
 roadRegister[i][i] = false.
 
 [output] boolean
-true if the new road system is good enough, false otherwise.
+true if the new road system is good enough, false otherwise. */
+
+Code:
+def solution(roadRegister):
+    l=len(roadRegister)
+    for i in range(l):
+        s=sum(roadRegister[i])
+        ss=sum(row[i] for row in roadRegister )
+        if s == ss:
+            continue
+        else:
+            return bool(0)
+    return bool(1)
 
